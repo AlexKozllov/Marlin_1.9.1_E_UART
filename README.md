@@ -21,3 +21,21 @@ tmc2208_serial_begin();
 [/code]
 
 - Функция постройки карты стола временно отключена, но в качестве Z_endstop_min используется индуктивный датчик
+
+Было:
+[code]
+#if HAS_DRIVER(TMC2208)
+safe_delay(2000);
+tmc2208_serial_begin();
+#endif
+[/code]
+
+Стало:
+[code]
+#if HAS_DRIVER(TMC2208)
+safe_delay(2100);
+tmc2208_serial_begin();
+#endif
+[/code]
+
+- - Функция постройки карты стола возобновлена в качестве Z_endstop_min используется индуктивный датчик
