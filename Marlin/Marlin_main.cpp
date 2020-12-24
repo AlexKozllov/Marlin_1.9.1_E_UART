@@ -15248,7 +15248,7 @@ void setup() {
     tmc_init_cs_pins();
   #endif
   #if HAS_DRIVER(TMC2208)
-    safe_delay(2000);
+    safe_delay(2100);
     tmc2208_serial_begin();
   #endif
 
